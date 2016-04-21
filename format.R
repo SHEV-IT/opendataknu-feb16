@@ -36,11 +36,13 @@ formatName <- function(dataset){
     dataset$name_sender <- gsub("\"|\\.$","",dataset$name_sender)
     dataset$name_sender <- gsub("[ ]+"," ",dataset$name_sender)
     dataset$name_sender <- tolower(dataset$name_sender)
+    dataset$name_sender <- gsub("i","³",dataset$name_sender) 
     
     dataset$name_rec <- gsub("\\.|,"," ",dataset$name_rec)
     dataset$name_rec <- gsub("\"|\\.$","",dataset$name_rec)
     dataset$name_rec <- gsub("[ ]+"," ",dataset$name_rec)
     dataset$name_rec <- tolower(dataset$name_rec)
+    dataset$name_rec <- gsub("i","³",dataset$name_rec) 
     return (dataset)
 }
 
